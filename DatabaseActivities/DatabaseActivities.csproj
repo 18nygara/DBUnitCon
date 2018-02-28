@@ -152,8 +152,28 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802281628384_FeetMeter.cs" />
+    <Compile Include="Migrations\201802281628384_FeetMeter.Designer.cs">
+      <DependentUpon>201802281628384_FeetMeter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281629527_FahrenheitCelsiuses.cs" />
+    <Compile Include="Migrations\201802281629527_FahrenheitCelsiuses.Designer.cs">
+      <DependentUpon>201802281629527_FahrenheitCelsiuses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281631307_MileFathoms.cs" />
+    <Compile Include="Migrations\201802281631307_MileFathoms.Designer.cs">
+      <DependentUpon>201802281631307_MileFathoms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281632009_PoundNewtons.cs" />
+    <Compile Include="Migrations\201802281632009_PoundNewtons.Designer.cs">
+      <DependentUpon>201802281632009_PoundNewtons.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Entity\FahrenheitCelsius.cs" />
+    <Compile Include="Models\Entity\FeetMeter.cs" />
+    <Compile Include="Models\Entity\MileFathom.cs" />
+    <Compile Include="Models\Entity\PoundNewton.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -197,7 +217,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Entity\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -211,6 +230,20 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802281628384_FeetMeter.resx">
+      <DependentUpon>201802281628384_FeetMeter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281629527_FahrenheitCelsiuses.resx">
+      <DependentUpon>201802281629527_FahrenheitCelsiuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281631307_MileFathoms.resx">
+      <DependentUpon>201802281631307_MileFathoms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281632009_PoundNewtons.resx">
+      <DependentUpon>201802281632009_PoundNewtons.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

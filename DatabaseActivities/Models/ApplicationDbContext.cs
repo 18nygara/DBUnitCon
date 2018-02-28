@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseActivities.Models.Entity;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Web;
 
 namespace DatabaseActivities.Models
 {
-    public class ApplicationDbContext:DbContext
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext() : base("DefaultConnection")
         {
@@ -23,5 +24,10 @@ namespace DatabaseActivities.Models
             modelBuilder.Configurations.AddFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(modelBuilder);
         }
+
+        public DbSet<FeetMeter> FeetMeters { get; set; }
+        public DbSet<FahrenheitCelsius> FahrenheitCelsiuses { get; set; }
+        public DbSet<MileFathom> MileFathoms { get; set; }
+        public DbSet<PoundNewton> PoundNewtons { get; set; }
     }
 }

@@ -125,7 +125,7 @@
 
 #unit1submit {
     grid-area: unit1submit;
-    width: 60%;
+    width: 42%;
     border: none;
     border-bottom: 2px solid white;
     padding: 12px 18px;
@@ -136,7 +136,7 @@
 
 #unit2submit {
     grid-area: unit2submit;
-    width: 60%;
+    width: 42%;
     border: none;
     border-bottom: 2px solid white;
     padding: 12px 18px;
@@ -209,11 +209,10 @@ textarea {
 }
 
 #deleted {
-    width: 30%;
+    width: 10%;
     height: 20%;
     border: none;
     border-bottom: 2px solid white;
-    padding: 12px 18px;
     margin: 8px 0;
     box-sizing: border-box;
     border-radius: 20px;

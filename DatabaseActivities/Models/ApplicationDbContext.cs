@@ -26,7 +26,7 @@ namespace DatabaseActivities.Models
         }
 
         public DbSet<FeetMeter> FeetMeters { get; set; }
-        public DbSet<FahrenheitCelsius> FahrenheitCelsiuses { get; set; }
+        public DbSet<CelsiusFahrenheit> FahrenheitCelsiuses { get; set; }
         public DbSet<MileFathom> MileFathoms { get; set; }
         public DbSet<PoundNewton> PoundNewtons { get; set; }
     }

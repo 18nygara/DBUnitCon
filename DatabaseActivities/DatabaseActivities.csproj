@@ -148,6 +148,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CelsiusFahrenheitController.cs" />
     <Compile Include="Controllers\FeetMeterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MileFathomController.cs" />
@@ -173,15 +174,17 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
-    <Compile Include="Models\Entity\FahrenheitCelsius.cs" />
+    <Compile Include="Models\Entity\CelsiusFahrenheit.cs" />
     <Compile Include="Models\Entity\FeetMeter.cs" />
     <Compile Include="Models\Entity\MileFathom.cs" />
     <Compile Include="Models\Entity\PoundNewton.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CelsiusFahrenheitRepository.cs" />
     <Compile Include="Repositories\FeetMeterRepository.cs" />
     <Compile Include="Repositories\MileFathomRepository\MileFathomRepository.cs" />
     <Compile Include="Repositories\PoundNewtonRepository.cs" />
+    <Compile Include="Services\CelsiusFahrenheitService.cs" />
     <Compile Include="Services\FeetMeterService.cs" />
     <Compile Include="Services\MileFathomService.cs" />
     <Compile Include="Services\PoundNewtonService.cs" />
@@ -229,10 +232,13 @@
     <Content Include="Views\MileFathom\Index.cshtml" />
     <Content Include="Views\PoundNewton\Index.cshtml" />
     <Content Include="Views\FeetMeter\Index.cshtml" />
+    <Content Include="Views\CelsiusFahrenheit\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data - Copy\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Views\CelsiusFahrenheitRepository\" />
+    <Folder Include="Views\CelsiusFahrenheitService\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

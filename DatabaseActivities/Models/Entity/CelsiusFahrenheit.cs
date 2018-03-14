@@ -5,7 +5,7 @@ using System.Web;
 
 namespace DatabaseActivities.Models.Entity
 {
-    public class FahrenheitCelsius :IEntity
+    public class CelsiusFahrenheit :IEntity
     {
         public int Id { get; set; }
         public double Fahrenheit { get; set; }

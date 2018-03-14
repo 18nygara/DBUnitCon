@@ -13,7 +13,7 @@ namespace DatabaseActivities.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201802281629527_FahrenheitCelsiuses"; }
+            get { return "201802281629527_CelsiusFahrenheits"; }
         }
         
         string IMigrationMetadata.Source

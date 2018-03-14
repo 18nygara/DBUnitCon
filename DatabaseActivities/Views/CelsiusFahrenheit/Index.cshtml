@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DatabaseActivities.Models.Entity.FahrenheitCelsius>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="containerUC">
+    <p class="head">
+        MyConversion
+    </p>
+    <p class="inspiration">
+        Changing the world by letting people convert units one conversion at a time.
+    </p>
+    <table class="menu" align="center">
+        <tr>
+            <th><a href="/FeetMeter/Index">Feet - Meter</a></th>
+            <th><a href="/CelsiusFahrenheit/Index">Celsius - Fahrenheit</a></th>
+            <th><a href="/MileFathom/Index">Miles - Fathoms</a></th>
+            <th><a href="/PoundNewton/Index">Pounds - Newtons</a></th>
+        </tr>
+    </table>
+    <div class="info">
+        <p id="lightbulbtext">Our converting capabilities are unparalleled, synthesizing aesthetic design with fast results.</p>
+        <img id="lightpic" src="/content/images/lightbulb.png" width="20" />
+        <p id="hearttext">90% of our users leave feeling satisfied with their conversion experience.</p>
+        <img id="heartpic" src="/content/images/heart.png" width="30" />
+        <p id="persontext">Talk with a representative now: 555-555-5555</p>
+        <img id="personpic" src="/content/images/face icon.png" width="30" />
+    </div>
+    <div id="conversion">
+        <p class="unit1head">Celsius</p>
+        <p class="unit2head">Fahrenheit</p>
+        <form action="~/CelsiusFahrenheit/CelsiusToFahrenheit" method="post">
+            <input id="unit1" name="celsius" type="number" placeholder="0" value="0" step="any" />
+            <input id="unit1submit" name="celsiusSubmit" type="submit" />
+        </form>
+        <form action="~/CelsiusFahrenheit/FahrenheitToCelsius" method="post">
+            <input id="unit2" name="fahrenheit" type="number" placeholder="0" value="0" step="any"/>
+            <input id="unit2submit" name="fahrenheitSubmit" type="submit" />
+        </form>
+    </div>
+    <text class="final">
+        @foreach (var item in Model)
+        {
+            <div>
+                @item.Celsius degrees celsius is @item.Fahrenheit degrees fahrenheit.
+            </div>
+            <form action="~/CelsiusFahrenheit/Delete" method="post">
+                <input name="id" value="@item.Id" hidden />
+                <input id="deleted" type="submit" value="Delete" />
+            </form>
+            <br />
+            <br />
+        }
+    </text>
+
+</div>
